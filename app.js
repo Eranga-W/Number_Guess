@@ -16,6 +16,7 @@ function guess() {
         count++;
         if (document.getElementById("txt").value == n) {
             document.getElementById("display").value="Won";
+            alert("Won");
         } else if (document.getElementById("txt").value > n) {
             document.getElementById("display").value="Lower... "+(3-count)+" Chances Left...";
         } else {
