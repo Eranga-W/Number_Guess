@@ -12,15 +12,17 @@ function guess() {
     if (count<3) {
         count++;
         if (document.getElementById("txt").value == n) {
-            console.log("Won");
+            document.getElementById("display").value="Won";
+            refresh();
         } else if (document.getElementById("txt").value > n) {
-            console.log("Lower");
-            console.log((3-count)+" Chances Left...");
+            document.getElementById("display").value="Lower... "+(3-count)+" Chances Left...";
         } else {
-            console.log("Higher");
-            console.log((3-count)+" Chances Left...");
+            document.getElementById("display").value="Higher... "+(3-count)+" Chances Left...";
         }
     }else{
         console.log("No any Chances Left...");
+        refresh();
+        document.getElementById("txt").value ="";
+        document.getElementById("display").value ="No any Chances Left...";
     }
 }
